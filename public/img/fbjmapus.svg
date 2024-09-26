@@ -1,0 +1,53 @@
+<svg width="1922" height="800" viewBox="0 0 1922 800" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_1_830)">
+<rect width="1922" height="800" fill="url(#pattern0)"/>
+<rect width="1922" height="800" fill="#F5FFF2"/>
+<g filter="url(#filter0_f_1_830)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M79.7441 -37.492C136.683 -32.9816 177.252 12.824 216.779 54.0121C255.093 93.9366 297.248 135.623 298.93 190.905C300.648 247.356 270.559 302.441 225.373 336.383C184.691 366.941 130.638 354.824 79.7441 355.545C27.5739 356.285 -28.2102 371.675 -70.0767 340.571C-116.27 306.252 -139.859 248.379 -141.863 190.905C-143.937 131.463 -122.334 73.1402 -80.8953 30.4319C-38.8255 -12.9268 19.487 -42.2652 79.7441 -37.492Z" fill="#8DB687"/>
+</g>
+<g filter="url(#filter1_f_1_830)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1765.76 469.765C1820.89 473.888 1876.64 428.572 1924.71 455.89C1980.7 487.707 2021.9 550.438 2020.99 614.815C2020.08 678.708 1974.41 735.352 1920.26 769.286C1874.86 797.731 1819.28 772.435 1765.76 774.747C1707.36 777.269 1638.86 824.327 1597.3 783.234C1555.77 742.16 1606.71 673.161 1604.03 614.815C1601.08 550.417 1533.1 473.245 1581.1 430.196C1629.81 386.506 1700.5 464.885 1765.76 469.765Z" fill="#8DB687" fill-opacity="0.9"/>
+</g>
+<g filter="url(#filter2_f_1_830)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1283.08 20.5785C1378.19 4.73064 1448.53 111.561 1504.29 191.016C1550 256.145 1556.87 334.761 1559.58 414.56C1562.44 498.633 1579.41 595.056 1520.03 654.009C1460.83 712.776 1364.33 706.082 1283.08 689.056C1217.22 675.257 1181.73 611.98 1127.51 571.763C1053.49 516.858 913.888 507.343 913.004 414.56C912.122 322 1061.43 321.437 1124.49 254.301C1191.39 183.078 1187.19 36.555 1283.08 20.5785Z" fill="#159C2A" fill-opacity="0.8"/>
+</g>
+<g filter="url(#filter3_f_1_830)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1528.52 -256.942C1593.48 -258.834 1649.05 -213.811 1692.02 -165.051C1732.04 -119.632 1742.54 -61.0765 1753.58 -1.55234C1768.63 79.6361 1826.94 180.171 1766.46 236.389C1705.63 292.933 1608.69 229.341 1528.52 207.65C1476.77 193.65 1436.58 164.684 1391.91 135.051C1326.95 91.9546 1217.87 76.2657 1213.15 -1.55234C1208.47 -78.7026 1314.21 -107.155 1374.27 -155.798C1423.94 -196.023 1464.63 -255.082 1528.52 -256.942Z" fill="white"/>
+</g>
+<g style="mix-blend-mode:soft-light" opacity="0.35">
+<rect width="1922" height="800" fill="white"/>
+<rect width="1922" height="800" fill="url(#pattern1)"/>
+</g>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="0.260146" height="0.625">
+<use xlink:href="#image0_1_830" transform="scale(0.000520291 0.00125)"/>
+</pattern>
+<filter id="filter0_f_1_830" x="-582" y="-478" width="1321" height="1278" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="220" result="effect1_foregroundBlur_1_830"/>
+</filter>
+<filter id="filter1_f_1_830" x="1124" y="-23" width="1337" height="1263" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="220" result="effect1_foregroundBlur_1_830"/>
+</filter>
+<filter id="filter2_f_1_830" x="473" y="-421" width="1531" height="1562" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="220" result="effect1_foregroundBlur_1_830"/>
+</filter>
+<filter id="filter3_f_1_830" x="913" y="-557" width="1180.35" height="1116.23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_1_830"/>
+</filter>
+<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="0.260146" height="0.625">
+<use xlink:href="#image1_1_830" transform="scale(0.000520291 0.00125)"/>
+</pattern>
+<clipPath id="clip0_1_830">
+<rect width="1922" height="800" fill="white"/>
+</clipPath>
+</defs>
+</svg>

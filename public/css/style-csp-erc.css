@@ -1,0 +1,410 @@
+
+.section_cspg_main {
+    background-color: #F7F7F7;
+}
+.section_cspg_main {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
+.section_cspg_tts {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+}
+.section_cspg_cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 5px;
+}	
+.section_cspg_main {
+    background-image: url(../img/HomeBD-min.jpg);
+}
+.ga__main_txt {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+.cs-ff-elem-h {
+	margin: 0 auto;
+	max-width: 1196px;
+}
+.cs-fd-elem-h {
+	text-align: center;
+}
+.ga__main_txt .ga__el_itm {
+	width: 100%;
+    display: flex;
+    max-width: 450px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;    
+}
+.ga__ico_txt, .ga__ico_team, .ga__ico_flx, .ga__logo_itm {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+.ga__logo_lnk {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.ga__ico_txt {
+	width: 100px;
+	height: 67px;
+}
+.ga__ico_team {
+	width: 100px;
+	height: 80px;
+}
+.ga__ico_flx {
+	width: 100px;
+	height: 86px;
+}
+.ga__el_el {
+    position: relative;
+    max-width: 390px;
+    text-align: left;
+    flex: 1;
+}
+.ga__el_phh, .ga__el_el p {
+	line-height: normal;
+	color: #000;
+	text-align: left;
+    font-weight: normal;
+    font-family: 'proxima_novaregular';
+}
+.ga__calc_title_sa, .ga__el_phh span {
+	font-style: italic;
+}
+.ga__el_phh span {
+    color: #159C2A;
+    font-style: italic;
+    font-weight: bold;
+    display: inline-block;
+}
+.ga__el_el p {
+    margin-bottom: 0px;
+}
+.ga__txt_icologo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: .8rem 0;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: auto;
+}
+.ga__logo_trst {
+	width: 110px;
+	height: 55px;
+}
+.ga__logo_abbb {
+	width: 165px;
+    height: 45px;
+}
+.ga__logo_ggl {
+	width: 100px;
+	height: 53px;
+}
+.section_cspg_tts h1 {
+    text-align: center;
+    color: #159C2A;
+}
+.section_cspg_tts h1 {
+    font-weight: 400;
+    background-color: transparent;
+    background: transparent;
+    font-family: 'proxima_novaregular';
+}
+.section_cspg_tts p {
+    text-transform: none;
+    font-size: 1rem;
+    margin: 0;
+    line-height: normal;
+    color: #000;
+    text-align: center;
+    font-family: 'proxima_novaregular';
+    padding: 0 15px;
+}
+.section_cont_cspg_h {
+    background: rgb(224 243 228) 0%;
+    text-align: center;
+    padding: 1.3rem 15px;
+    text-transform: none;
+}
+.section_cont_cspg_h p {
+    font-weight: 400;
+    font-family: 'proxima_novaregular';
+}
+.section_cont_cspg_h p, .section_cont_cspg_h span  {
+    color: #000;
+    margin: 0;
+}
+.section_cont_cspg_h span {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'proxima_novasemibold';
+}
+.form__calc_title_sb {
+    color: #159C2A !important;
+}
+.button_frm_erc {
+    max-width: 330px;
+    width: 100% !important;
+}
+.button_frm_mpu {
+    max-width: 300px;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 72px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 5px;
+}
+.button_frm_mpu span {
+    position: relative;
+    z-index: 2;
+    line-height: 1.7rem;
+}
+.section_cont_rpg_b .bl-itmfl {
+    max-width: 97%;
+    margin: 2rem auto 0;
+}
+.form__calc_row {
+    margin-bottom: 1rem;
+}
+.form__calc_hmn {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #565656;
+    font-family: 'proxima_novaregular';
+}
+.section_cspg_tt_main {
+    position: relative;
+    z-index: 2;
+    padding: 1rem 1.5rem;
+}
+.section_cspg_cont_itm_frm .form__calc_scr {
+    max-width: 100% !important;
+}
+
+.page_type_page_erc .section_cspg_cont_itm_frm, .page_type_page_sloc .section_cspg_cont_itm_frm {
+    width: 100%;
+}
+
+#simple-banner {
+    display: none!important;
+}
+
+
+.ga__calc_title_sb {
+    text-transform: uppercase !important;
+}
+.list_stct, .list_stct_city {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+}
+
+.ga__main_itm {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.section_wrapper {
+    max-width: 1920px !important;
+    padding: 0 30px;
+}
+.column.ga__main_bg {
+    margin: 0 auto !important;
+}
+.ga__el_el h3 {
+    margin-bottom: 0;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 200;
+    font-family: manrope,sans-serif;
+}
+.ga__el_el h3 span {
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 1153px) {
+    .ga__main_txt {
+        height: 100vh;
+        max-height: 800px;
+        margin: 0 1rem;
+    }
+}
+@media only screen and (min-width: 959px) {
+    .section_cspg_tts h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+        padding: 2rem 5px;
+        margin-bottom: 0;
+        margin-top: 3rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+    .section_cspg_tts h1 {
+        font-size: 2.5rem;
+        line-height: 2.6rem;
+        padding: 2rem 5px;
+        margin-bottom: 0;
+        margin-top: 3rem;
+    }
+    h2, .text-logo #logo {
+        font-size: 3rem !important;
+        line-height: 3rem !important;
+    }
+    .list_stct, .list_stct_city {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+    
+}
+@media (min-width: 479px) and (max-width: 768px) {
+    .section_cspg_tts h1 {
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+        padding: 2rem 5px;
+        margin-bottom: 0;
+        margin-top: 3rem;
+    }
+    h2, .text-logo #logo {
+        font-size: 2.2rem !important;
+        line-height: 2.5rem !important;
+    }
+    .list_stct, .list_stct_city {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .ga__main_txt .ga__el_itm {
+        margin-bottom: 4rem;
+    }
+    .ga__el_phh {
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        margin-bottom: 0;
+    }
+    .ga__logo_itm {
+        margin: 0.5rem 1.5rem 0.5rem 0.5rem;
+    }
+    .section_cont_cspg_h p, .section_cont_cspg_h span  {
+        line-height: 1.8rem;
+        font-size: 1.5rem;
+    }
+    .form__calc_nvgp_inp {
+        flex: 1;
+        width: 100%;
+    }
+    .form__calc_btnlbl {
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+    }
+    .form__calc_btnlbl_pr {
+        font-size: 1.6rem;
+    }
+    .linck_stct {
+        font-size: 1rem;
+        line-height: 1.51rem;
+    }
+    .ga__el_el h3 {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .ga__main_txt .ga__el_itm {
+        margin-bottom: 2rem;
+    }
+    .ga__ico_txt, .ga__ico_team, .ga__ico_flx {
+        max-width: 60px;
+        margin-right: 10px;
+        max-height: 58px;
+    }
+    .ga__el_phh {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+        margin-bottom: 0;
+    }
+    .ga__logo_itm {
+        margin: 0.5rem;
+    }
+    .section_cont_cspg_h p, .section_cont_cspg_h span  {
+        line-height: 1.4rem;
+        font-size: 1.3rem;
+    }
+    .form__calc_nvgp_inp {
+        flex: 1;
+        width: 100%;
+    }
+    .form__calc_btnlbl {
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+    }
+    .form__calc_btnlbl_pr {
+        font-size: 1.4rem;
+    }
+    .linck_stct {
+        font-size: 1rem;
+        line-height: 1.51rem;
+    }
+    .ga__el_el h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .section_cspg_tts h1 {
+        font-size: 1.8rem;
+        line-height: 1.9rem;
+        padding: 0 5px 0;
+        margin-bottom: 2rem;
+        margin-top: 3.5rem;
+    }
+    h2, .text-logo #logo {
+        font-size: 1.7rem !important;
+        line-height: 2rem !important;
+    }
+    .list_stct, .list_stct_city {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
+@media only screen and (min-width: 425px) {
+    .section_cspg_tt_main {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        padding: 1rem 0;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .section_cspg_tt_main {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        min-height: 130px;
+        padding: 1rem 0;
+    }
+}
+
+
+
+
+
