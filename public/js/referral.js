@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-
-
-    // const reviews = $(".reviews-item");
-    // console.log("reviews", reviews);
-
     const reviews = [
         {
             stars: 5,
