@@ -48,14 +48,17 @@ $(document).ready(function(){
     const rating = reviews.reduce((acc, item) => acc + item.stars, 0)/reviews.length;
 
     $(".rating-value").text(rating.toFixed(1));
+    $(".rating-count").text(`${reviews.length} reviews`);
 
     const reviewsData = reviews.reduce((acc, review) => {
         return acc + `
             <div class="reviews-item" data-stars="${review.stars}" itemscope itemtype="https://schema.org/Review">
-                <div class="reviews-item-content" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
-                    <span itemprop="name" class="d-none">Fundshop</span>
-                    <div class="reviews-title">${review.title}</div>
-                    <p class="reviews-sub-title">${review.text}</p>
+                <div class="reviews-item-content">
+                    <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                        <span itemprop="name" class="d-none">Fundshop</span>
+                        <div class="reviews-title">${review.title}</div>
+                        <p class="reviews-sub-title">${review.text}</p>
+                    </div>
                     <div class="reviews-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                         <span itemprop="name">${review.author}</span>, 
                         <span class="reviews-date">${review.date}</span>
