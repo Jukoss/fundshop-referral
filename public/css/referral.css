@@ -37,7 +37,21 @@
     position: absolute;
     right: 470px;
     top: 35px;
+    transform-origin: center center;
+    animation: zoom 10s infinite;
 }
+
+@keyframes zoom {
+    0% {
+      transform: scale(0.5);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.5);
+    }
+  }
 
 .green-box-two {
     width: 133px;
@@ -46,6 +60,8 @@
     position: absolute;
     right: 148px;
     bottom: 0;
+    transform-origin: center center;
+    animation: zoom 10s infinite;
 }
 
 .light-green-box {
@@ -236,6 +252,7 @@
     gap: 15px;
     padding: 35px 15px 0;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .offer-item {
@@ -420,22 +437,22 @@
     position: relative;
     width: 100%;
     text-align: left;
-    padding: 0px 15px 0 0;
+    padding: 15px;
     transition: all 0.5s;
 }
 
 .steps-item:hover {
-    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 9px 35px 0px rgba(0, 0, 0, 0.08);
     background-color: #159C2A;
 }
 
 .steps-item:after {
     content: "";
     width: 1px;
-    height: 100%;
+    height: calc(100% - 15px);
     background-color: #fff;
     position: absolute;
-    top: 0;
+    top: 15px;
     right: -15px;
 }
 
@@ -537,7 +554,7 @@
     white-space: normal;
 }
 
-.reviews-date {
+.reviews-author {
     font-family: "proxima_novasemibold";
     color: rgba(35, 35, 35, 0.60);
     font-size: 12px;
@@ -546,7 +563,7 @@
     text-align: left;
 }
 
-.reviews-date span {
+.reviews-author .reviews-date {
     font-family: "proxima_novaregular";
     font-weight: 400;
 }
@@ -575,7 +592,7 @@
     margin-bottom: 0;
 }
 
-.reviews-data span {
+.reviews-data b {
     font-family: "proxima_novasemibold";
 }
 
