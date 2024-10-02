@@ -1,4 +1,77 @@
 $(document).ready(function(){
+
+
+
+    // const reviews = $(".reviews-item");
+    // console.log("reviews", reviews);
+
+    const reviews = [
+        {
+            stars: 5,
+            title: "fast and efficient",
+            text: "On deck was really great and giving me the funds that I needed they even approved me",
+            author: "Sunny",
+            date: "August 28",
+        },
+        {
+            stars: 4,
+            title: "Great Experience with John",
+            text: "Worked with Jon D'Amico. Great experience. Simple and hassle free.",
+            author: "Jason Simmons",
+            date: "August 27",
+        },
+        {
+            stars: 4,
+            title: "Quick and easy",
+            text: "Quick and easy! Keeping small businesses ready for the next projects",
+            author: "POSOL",
+            date: "August 24",
+        },
+        {
+            stars: 4,
+            title: "Professionalism and simply process",
+            text: "Professionalism and simply process",
+            author: "Michael",
+            date: "August 23",
+        },
+        {
+            stars: 5,
+            title: "Justin Freidman is amazing",
+            text: "Justin Freidman is amazing 10/10",
+            author: "G TC",
+            date: "August 24",
+        },
+        {
+            stars: 4,
+            title: "Professionalism and simply process",
+            text: "Professionalism and simply process",
+            author: "Michael",
+            date: "August 23",
+        },
+    ];
+
+    const rating = reviews.reduce((acc, item) => acc + item.stars, 0)/reviews.length;
+
+    $(".rating-value").text(rating.toFixed(1));
+
+    const reviewsData = reviews.reduce((acc, review) => {
+        return acc + `
+            <div class="reviews-item" data-stars="${review.stars}" itemscope itemtype="https://schema.org/Review">
+                <div class="reviews-item-content" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                    <span itemprop="name" class="d-none">Fundshop</span>
+                    <div class="reviews-title">${review.title}</div>
+                    <p class="reviews-sub-title">${review.text}</p>
+                    <div class="reviews-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">${review.author}</span>, 
+                        <span class="reviews-date">${review.date}</span>
+                    </div>
+                </div>                            
+            </div>
+        `
+    }, "");
+
+    $(".reviews-content").html(reviewsData);
+
     $('.reviews-content').slick({
         dots: false,
         slidesToShow: 5,
