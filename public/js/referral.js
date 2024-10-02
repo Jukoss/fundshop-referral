@@ -48,6 +48,7 @@ $(document).ready(function(){
     const rating = reviews.reduce((acc, item) => acc + item.stars, 0)/reviews.length;
 
     $(".rating-value").text(rating.toFixed(1));
+    $(".rating-count").text(`${reviews.length} reviews`);
 
     const reviewsData = reviews.reduce((acc, review) => {
         return acc + `
