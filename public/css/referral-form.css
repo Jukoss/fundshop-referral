@@ -1,0 +1,187 @@
+.business-owner-details {
+    padding: 81px 0 0;
+    margin: 0 auto;
+    max-width: 1290px;
+}
+
+.referral-form {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.referral-form fieldset {
+    margin-bottom: 55px;
+}
+
+.referral-form fieldset legend {
+    color: #232323;
+    font-family: "proxima_novaregular";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.referral-form label {
+    color: #232323CC;
+    text-align: left;
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.referral-form input {
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(35, 35, 35, 0.80);
+    border: 1px solid #D0D3D1;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(223, 229, 224, 0.10);
+    border-radius: 0;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+}
+
+.referral-form input:active,
+.referral-form input:focus,
+.referral-form input:hover {
+    border: 1px solid var(--Green, #159C2A);
+    outline: none;
+    box-shadow: none;
+}
+
+.referral-form .form-group {
+    margin-bottom: 27px;
+}
+
+.radio-toolbar {
+    display: flex;
+    align-items: center;
+}
+
+.radio-toolbar input[type="radio"] {
+    display: none;
+}
+
+.radio-toolbar label {
+    color: #232323CC;
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    position: relative;
+    padding-right: 52px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-toolbar label::after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #D0D3D1;
+    position: absolute;
+    top: -2px;
+    right: 15px;
+}
+
+.radio-toolbar label::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+    background-color: #159C2A;
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    display: none;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+    color: #232323;
+    font-family: "proxima_novasemibold";
+}
+
+.radio-toolbar input[type="radio"]:checked+label::after {
+    background-color: transparent;
+    border: 1px solid #159C2A;
+}
+
+.radio-toolbar input[type="radio"]:checked+label::before {
+    display: block;
+}
+
+.radio-toolbar label:hover::after{
+    background-color: transparent;
+    border: 1px solid #159C2A;
+}
+
+.radio-toolbar label:hover::before{
+    display: block;
+}
+
+.referral-form textarea {
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(35, 35, 35, 0.80);
+    border: 1px solid #D0D3D1;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(223, 229, 224, 0.10);
+    border-radius: 0;
+    height: 95px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
+
+.referral-form textarea:active,
+.referral-form textarea:focus,
+.referral-form textarea:hover {
+    border: 1px solid var(--Green, #159C2A);
+    outline: none;
+    box-shadow: none;
+}
+
+.custom-select .ms-choice {
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(35, 35, 35, 0.80);
+    border: 1px solid #D0D3D1;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(223, 229, 224, 0.10);
+    border-radius: 0;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+    resize: none;
+}
+
+.custom-select .ms-choice>span {
+    background-color: transparent;
+    color: rgba(35, 35, 35, 0.80);
+    text-align: left;
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    opacity: 0.7;
+}
