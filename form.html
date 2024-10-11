@@ -855,8 +855,10 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js"></script>
 
-<script src="./public/js/referral-form.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js" integrity="sha512-LsnSViqQyaXpD4mBBdRYeP6sRwJiJveh2ZIbW41EBrNmKxgr/LFZIiWT6yr+nycvhvauz8c2nYMhrP80YhG7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css" integrity="sha512-34s5cpvaNG3BknEWSuOncX28vz97bRI59UnVtEEpFX536A7BtZSJHsDyFoCl8S7Dt2TPzcrCEoHBGeM4SUBDBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<script src="./public/js/referral-form.js"></script>
 	
 </head>
 <body class="animate-bottom page-referral-program page_type_page">
@@ -1091,7 +1093,12 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="date-birth">Date of Birth</label>
-                                        <input type="text" class="form-control" name="date-birth">
+                                        <div class="datepicker-wrp">
+                                            <input type="text" class="form-control datepicker" placeholder="MM/DD/YYYY" name="date-birth">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 18 21" fill="none">
+                                                <path d="M6 9.5H4V11.5H6V9.5ZM10 9.5H8V11.5H10V9.5ZM14 9.5H12V11.5H14V9.5ZM16 2.5H15V0.5H13V2.5H5V0.5H3V2.5H2C0.89 2.5 0.00999999 3.4 0.00999999 4.5L0 18.5C0 19.0304 0.210714 19.5391 0.585786 19.9142C0.960859 20.2893 1.46957 20.5 2 20.5H16C17.1 20.5 18 19.6 18 18.5V4.5C18 3.4 17.1 2.5 16 2.5ZM16 18.5H2V7.5H16V18.5Z" fill="#232323" fill-opacity="0.8"/>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -1119,7 +1126,12 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="company-phone">Company Phone</label>
-                                        <input type="text" class="form-control" name="company-phone">
+                                        <div class="phone-number-wrp">
+                                            <input type="text" class="form-control phone-number" name="company-phone" placeholder="(___) ___-____" maxlength="14">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41406 0.882645C1.54529 0.751606 1.70286 0.649953 1.87634 0.584424C2.04982 0.518895 2.23525 0.490985 2.42033 0.502545C2.60541 0.514105 2.78593 0.56487 2.94991 0.651476C3.11389 0.738082 3.25759 0.858551 3.3715 1.0049L4.71771 2.73448C4.96445 3.05174 5.05145 3.46501 4.95395 3.85503L4.54371 5.49761C4.52265 5.58269 4.52387 5.67177 4.54725 5.75624C4.57063 5.84072 4.61539 5.91774 4.67721 5.97988L6.5199 7.82271C6.58211 7.88466 6.65925 7.92949 6.74387 7.95288C6.82848 7.97627 6.9177 7.97742 7.00288 7.95622L8.64458 7.54595C8.83706 7.49811 9.03787 7.49451 9.23194 7.53543C9.426 7.57635 9.60827 7.66072 9.76505 7.78221L11.4945 9.12777C12.1162 9.61155 12.1732 10.5303 11.6167 11.0861L10.8413 11.8616C10.2863 12.4167 9.45681 12.6604 8.68358 12.3882C6.70415 11.6926 4.9071 10.5594 3.42625 9.07302C1.94007 7.59226 0.806992 5.79535 0.11135 3.81603C-0.160142 3.04349 0.0836006 2.21321 0.638583 1.65818L1.41406 0.882645Z" fill="#232323" fill-opacity="0.8"/>
+                                              </svg>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -1153,7 +1165,7 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="company-tax-id">Tax ID</label>
-                                        <input type="text" class="form-control" name="company-tax-id">
+                                        <input type="text" class="form-control tax-id" name="company-tax-id" placeholder="__ - _________" maxlength="13">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="company-state-inc">State of Inc.</label>
@@ -1205,7 +1217,7 @@ void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,win
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="about-company-tax-id">Tax ID</label>
-                                        <input type="text" class="form-control" name="about-company-tax-id">
+                                        <input type="text" class="form-control tax-id" name="about-company-tax-id" placeholder="__ - _________" maxlength="13">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="state-company-state-inc">State of Inc.</label>
