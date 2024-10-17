@@ -17,9 +17,7 @@ $(document).ready(function(){
     });
     
 
-    $('.phone-number')
-
-	.keydown(function (e) {
+    $('.phone-number').keydown(function (e) {
 		var key = e.which || e.charCode || e.keyCode || 0;
 		$phone = $(this);
 
@@ -75,10 +73,7 @@ $(document).ready(function(){
 	});
 
 
-    $('.tax-id')
-
-
-	.keydown(function (e) {
+    $('.tax-id').keydown(function (e) {
 		var key = e.which || e.charCode || e.keyCode || 0;
 		$phone = $(this);
 
@@ -106,9 +101,7 @@ $(document).ready(function(){
 	})
 
     let responseZipCode = "";
-
-    $('#zip-code')
-	.keyup(function (e) {
+    $('#zip-code').keyup(function (e) {
         var key = e.which || e.charCode || e.keyCode || 0;
         $zipCode = $(this);
 
@@ -139,22 +132,11 @@ $(document).ready(function(){
                     }
                 });
 			}
-
-		}
-
-		// Allow numeric (and tab, backspace, delete) keys only
-		return (key == 8 || 
-				key == 9 ||
-				key == 46 ||
-				(key >= 48 && key <= 57) ||
-				(key >= 96 && key <= 105));
-        
+		}  
     });
 
     let responseCompanyZipCode = "";
-
-    $('#company-zip-code')
-	.keyup(function (e) {
+    $('#company-zip-code').keyup(function (e) {
         var key = e.which || e.charCode || e.keyCode || 0;
         $companyZipCode = $(this);
 
@@ -185,42 +167,27 @@ $(document).ready(function(){
                     }
                 });
 			}
-
 		}
-
-		// Allow numeric (and tab, backspace, delete) keys only
-		return (key == 8 || 
-				key == 9 ||
-				key == 46 ||
-				(key >= 48 && key <= 57) ||
-				(key >= 96 && key <= 105));
-        
     });
 
-    $('#company-zip-code')
-	.keydown(function (e) {
+    $('#company-zip-code').keydown(function (e) {
         var key = e.which || e.charCode || e.keyCode || 0;
 
-		// Allow numeric (and tab, backspace, delete) keys only
 		return (key == 8 || 
 				key == 9 ||
 				key == 46 ||
 				(key >= 48 && key <= 57) ||
 				(key >= 96 && key <= 105));
-        
     });
 
-    $('#zip-code')
-	.keydown(function (e) {
+    $('#zip-code').keydown(function (e) {
         var key = e.which || e.charCode || e.keyCode || 0;
 
-		// Allow numeric (and tab, backspace, delete) keys only
 		return (key == 8 || 
 				key == 9 ||
 				key == 46 ||
 				(key >= 48 && key <= 57) ||
-				(key >= 96 && key <= 105));
-        
+				(key >= 96 && key <= 105)); 
     });
 
 
@@ -231,20 +198,10 @@ $(document).ready(function(){
 
     $('.referral-form').submit(function(event) {
         event.preventDefault();
-
-        const data = $(this).serializeArray().reduce(function(obj, item) {
-            obj[item.name] = item.value;
-            return obj;
-        }, {});
-
-        
-        console.log("data", data);
     }); 
-
 
     $('.referral-form').validate({
         focusCleanup: true,
-        focusInvalid: false,
         onfocusout: false,
         onkeyup: function(element) {$(element).valid()},
         rules: {
@@ -310,7 +267,6 @@ $(document).ready(function(){
                 required: true,
             },
 
-
             "business-activity": {
                 required: true,
             },
@@ -350,7 +306,122 @@ $(document).ready(function(){
         },
         errorPlacement: function (error, element) {
             $(element).next().append(error);
+        },
+        submitHandler: function(form) {
+            const data = $(form).serializeArray().reduce(function(obj, item) {
+                if(obj[item.name]) {
+                    const prevElement = Array.isArray(obj[item.name]) ? obj[item.name] : [obj[item.name]];
+                    obj[item.name] = [...prevElement, item.value];
+                } else {
+                    obj[item.name] = item.value;
+                }
+                return obj;
+            }, {});
+
+            console.log("data", data);
+    
+            $(".btn-sign-up").attr("disabled", true);
+
+            // $.ajax({
+            //     url: "url",
+            //     cache: false,
+            //     dataType: "json",
+            //     type: "POST",
+            //     data: data,
+            //     success: function() {
+            //         $(".btn-sign-up").attr("disabled", false);
+            //         $('.select2-selection__rendered').html("");
+            //         form.reset();
+            //         showSuccessFormModal();
+            //     },
+            //    error:function({errorFields}){
+            // example
+            //         const errorFields = [
+            //             {
+            //                 field: "first-name",
+            //                 message: "At least 3 characters",
+            //             },
+            //             {
+            //                 field: "home-address",
+            //                 message: "At least 5 characters",
+            //             }
+            //         ];
+
+            //         if (errorFields.length) {
+            //             errorWithFields(errorFields)
+            //         } else {
+            //             showErrorFormModal();
+            //         }
+            //         $(".btn-sign-up").attr("disabled", false);
+            //     }
+            // }); 
+            
+            
+            //test 
+            var urlParams = new URLSearchParams(window.location.search);
+            const TEST_ERROR = urlParams.has('test_error');
+            const TEST_ERROR_FIELDS = urlParams.has('test_error_fields');
+
+            if (TEST_ERROR) {
+                testApi(showErrorFormModal);
+            } else if (TEST_ERROR_FIELDS) {
+                testApi(errorWithFields);
+            } else {
+                testApi(showSuccessFormModal)
+                form.reset();
+            }
         }
     });
+
+    const ERRORS = [
+        {
+            field: "first-name",
+            message: "At least 3 characters",
+        },
+        {
+            field: "home-address",
+            message: "At least 5 characters",
+        }
+    ];
+
+    function errorWithFields(errors = ERRORS) {
+
+        if (errors.length) {
+            errors.forEach((error, index) => {
+                const elementWithError = `#${error.field}`;
+                $(elementWithError).next().html(`<label id="${error.field}-error" class="error" for="${error.field}" style="">${error.message}</label>`);
+                $(elementWithError).addClass("is-invalid");
+                if(index === 0) {
+                    const firstElement = document.getElementById(error.field);
+                    firstElement.scrollIntoView({ block: 'center', behavior: 'smooth' });  
+                }
+            });
+        }
+    }
+
+    function testApi(response) {
+        setTimeout(() => {
+            response();
+            $(".btn-sign-up").attr("disabled", false);
+        }, 1000);
+    }
+
+    function showSuccessFormModal() {
+        let formModalPopUpMsg = new bootstrap.Modal(document.getElementById('modalMsgForm'));
+        if (formModalPopUpMsg) {
+            if (!$('#modalMsgForm').hasClass('show')) {
+                formModalPopUpMsg.show()
+            }    
+        }   
+    }
+
+    function showErrorFormModal() {
+        let formModalPopUp = new bootstrap.Modal(document.getElementById('mainFormAction'));
+        if (formModalPopUp) {
+            if (!$('#mainFormAction').hasClass('show')) {
+                formModalPopUp.show()
+            }    
+        }   
+    }
   
 });

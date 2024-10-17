@@ -405,6 +405,11 @@ select {
     outline: none;
 }
 
+.btn-sign-up:disabled {
+    background-color: #D0D3D1;
+    color: #000;
+}
+
 .submit-block .referral-sub-title {
     color: #000;
     max-width: 586px;
