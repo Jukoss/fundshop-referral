@@ -10,15 +10,20 @@ $(document).ready(function(){
         );
     });
 
+    
+    const today = new Date();
+    const dda = today.getDate();
+    const mma = today.getMonth()+1;
+    const yyyya = today.getFullYear();
+
     $('.datepicker').datepicker({
         autoclose: true,
         startDate: "01/01/1950",
-        endDate: new Date(),
+        endDate: mma+'/'+dda+'/'+(yyyya - 18),
     });
     
-
     $('.phone-number').keydown(function (e) {
-		var key = e.which || e.charCode || e.keyCode || 0;
+		const key = e.which || e.charCode || e.keyCode || 0;
 		$phone = $(this);
 
     // Don't let them remove the starting '('
@@ -59,8 +64,7 @@ $(document).ready(function(){
 			$phone.val('(');
 		}
 		else {
-			var val = $phone.val();
-			$phone.val('').val(val); // Ensure cursor remains at the end
+			$phone.val('').val($phone.val()); // Ensure cursor remains at the end
 		}
 	})
 	
@@ -74,7 +78,7 @@ $(document).ready(function(){
 
 
     $('.tax-id').keydown(function (e) {
-		var key = e.which || e.charCode || e.keyCode || 0;
+		const key = e.which || e.charCode || e.keyCode || 0;
 		$phone = $(this);
 
 		// Auto-format- do not expose the mask as the user begins to type
@@ -95,20 +99,17 @@ $(document).ready(function(){
 	.bind('focus click', function () {
 		$phone = $(this);
 		
-        var val = $phone.val();
-        $phone.val('').val(val); // Ensure cursor remains at the end
+        $phone.val('').val($phone.val()); // Ensure cursor remains at the end
 
 	})
 
-    let responseZipCode = "";
     $('#zip-code').keyup(function (e) {
-        var key = e.which || e.charCode || e.keyCode || 0;
+        const key = e.which || e.charCode || e.keyCode || 0;
         $zipCode = $(this);
 
         if (key !== 8 && key !== 9) {	
-			if ($zipCode.val().length === 5 && $zipCode.val() != responseZipCode) {
+			if ($zipCode.val().length >= 5) {
 
-                responseZipCode = $zipCode.val();
                 const validator = $(".referral-form").validate();
 
                 $.ajax({
@@ -135,15 +136,13 @@ $(document).ready(function(){
 		}  
     });
 
-    let responseCompanyZipCode = "";
     $('#company-zip-code').keyup(function (e) {
-        var key = e.which || e.charCode || e.keyCode || 0;
+        const key = e.which || e.charCode || e.keyCode || 0;
         $companyZipCode = $(this);
 
         if (key !== 8 && key !== 9) {	
-			if ($companyZipCode.val().length === 5 && $companyZipCode.val() != responseCompanyZipCode) {
+			if ($companyZipCode.val().length >= 5 ) {
 
-                responseCompanyZipCode = $companyZipCode.val();
                 const validator = $(".referral-form").validate();
 
                 $.ajax({
@@ -171,7 +170,7 @@ $(document).ready(function(){
     });
 
     $('#company-zip-code').keydown(function (e) {
-        var key = e.which || e.charCode || e.keyCode || 0;
+        const key = e.which || e.charCode || e.keyCode || 0;
 
 		return (key == 8 || 
 				key == 9 ||
@@ -181,7 +180,7 @@ $(document).ready(function(){
     });
 
     $('#zip-code').keydown(function (e) {
-        var key = e.which || e.charCode || e.keyCode || 0;
+        const key = e.which || e.charCode || e.keyCode || 0;
 
 		return (key == 8 || 
 				key == 9 ||
@@ -207,9 +206,11 @@ $(document).ready(function(){
         rules: {
             "first-name": {
                 required: true,
+                minlength: 3,
             },
             "last-name": {
                 required: true,
+                minlength: 3,
             },
             "email": {
                 required: true,
@@ -220,6 +221,7 @@ $(document).ready(function(){
             },
             "home-address": {
                 required: true,
+                minlength: 1,
             },
             "zip-code": {
                 required: true,
@@ -234,6 +236,7 @@ $(document).ready(function(){
 
             "company-name": {
                 required: true,
+                minlength: 3,
             },
             "company-phone": {
                 required: true,
@@ -245,6 +248,7 @@ $(document).ready(function(){
             },
             "business-address": {
                 required: true,
+                minlength: 3,
             },
             "company-zip-code": {
                 required: true,
@@ -276,9 +280,11 @@ $(document).ready(function(){
 
             "hear-about-us": {
                 required: true,
+                minlength: 3,
             },
             "references": {
                 required: true,
+                minlength: 3,
             },
             "per-month": {
                 required: true,
@@ -358,7 +364,7 @@ $(document).ready(function(){
             
             
             //test 
-            var urlParams = new URLSearchParams(window.location.search);
+            const urlParams = new URLSearchParams(window.location.search);
             const TEST_ERROR = urlParams.has('test_error');
             const TEST_ERROR_FIELDS = urlParams.has('test_error_fields');
 
