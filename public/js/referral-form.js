@@ -369,6 +369,7 @@ $(document).ready(function(){
             } else {
                 testApi(showSuccessFormModal)
                 form.reset();
+                $('.select2-selection__rendered').html("");
             }
         }
     });
