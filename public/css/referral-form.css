@@ -235,6 +235,7 @@
     height: 16px;
     border-radius: 4px;
     background-color: #DFE5E0;
+    border: 1px solid #159C2A;
 }
 
 .select2-dropdown.select2-dropdown--below,
@@ -292,6 +293,7 @@
 .select2-results__option--selected:before {
     background-color: #159C2A;
     background-image: url("../img/checkbox-icon.svg");
+    background-position: center;
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
