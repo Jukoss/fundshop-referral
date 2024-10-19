@@ -201,7 +201,7 @@ $(document).ready(function(){
 
     $('.referral-form').validate({
         focusCleanup: true,
-        onfocusout: false,
+        onfocusout: function(element) {$(element).valid()},
         onkeyup: function(element) {$(element).valid()},
         rules: {
             "first-name": {
