@@ -1,0 +1,458 @@
+.row {
+    padding: 0 15px;
+}
+.business-owner-details {
+    padding: 81px 0 0;
+    margin: 0 auto;
+    max-width: 1290px;
+}
+
+.referral-form {
+    width: 100%;
+}
+
+.referral-form fieldset {
+    margin-bottom: 55px;
+}
+
+.referral-form fieldset legend {
+    color: #232323;
+    font-family: "proxima_novaregular";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.referral-form label {
+    color: #232323CC;
+    text-align: left;
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.referral-form input {
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(35, 35, 35, 0.80);
+    border: 1px solid #D0D3D1;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(223, 229, 224, 0.10);
+    border-radius: 0;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+}
+
+.referral-form input:active,
+.referral-form input:focus,
+.referral-form input:hover {
+    border: 1px solid var(--Green, #159C2A);
+    outline: none;
+    box-shadow: none;
+}
+
+.radio-toolbar {
+    display: flex;
+    align-items: center;
+}
+
+.radio-toolbar input[type="radio"] {
+    display: none;
+}
+
+.radio-toolbar label {
+    color: #232323CC;
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    position: relative;
+    padding-right: 52px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-toolbar label::after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #D0D3D1;
+    position: absolute;
+    top: -2px;
+    right: 15px;
+}
+
+.radio-toolbar label::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+    background-color: #159C2A;
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    display: none;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+    color: #232323;
+    font-family: "proxima_novasemibold";
+}
+
+.radio-toolbar input[type="radio"]:checked+label::after {
+    background-color: transparent;
+    border: 1px solid #159C2A;
+}
+
+.radio-toolbar input[type="radio"]:checked+label::before {
+    display: block;
+}
+
+.radio-toolbar label:hover::after{
+    background-color: transparent;
+    border: 1px solid #159C2A;
+}
+
+.radio-toolbar label:hover::before{
+    display: block;
+}
+
+.referral-form textarea {
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(35, 35, 35, 0.80);
+    border: 1px solid #D0D3D1;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(223, 229, 224, 0.10);
+    border-radius: 0;
+    height: 95px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
+
+.referral-form textarea:active,
+.referral-form textarea:focus,
+.referral-form textarea:hover {
+    border: 1px solid var(--Green, #159C2A);
+    outline: none;
+    box-shadow: none;
+}
+
+.custom-select .ms-choice {
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(35, 35, 35, 0.80);
+    border: 1px solid #D0D3D1;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(223, 229, 224, 0.10);
+    border-radius: 0;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+    resize: none;
+}
+
+.custom-select .ms-choice>span {
+    background-color: transparent;
+    color: rgba(35, 35, 35, 0.80);
+    text-align: left;
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    opacity: 0.7;
+}
+
+.datepicker-wrp {
+    position: relative;
+}
+
+.datepicker-wrp svg {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    pointer-events: none;
+}
+
+.phone-number-wrp {
+    position: relative;
+}
+
+.phone-number-wrp svg {
+    position: absolute;
+    left: 12px;
+    top: 16px;
+    pointer-events: none;
+}
+
+.phone-number-wrp input {
+    padding-left: 36px;
+}
+
+.select2-results__option {
+    color: rgba(35, 35, 35, 0.80);
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px 0 36px;
+    position: relative;
+    border: 1px solid #D0D3D1;
+    border-bottom: none;
+    background: #FFF;
+}
+
+.select2-results__option:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: #DFE5E0;
+    border: 1px solid #159C2A;
+}
+
+.select2-dropdown.select2-dropdown--below,
+.select2-dropdown.select2-dropdown--above {
+    border: none;
+    border-bottom: 1px solid #D0D3D1;
+    overflow: hidden;
+}
+
+.select2-dropdown.select2-dropdown--below {
+    margin-top: 11px;
+}
+
+.select2-dropdown.select2-dropdown--above {
+    top: -11px;
+}
+
+.select2-container--default .select2-selection--multiple {
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(35, 35, 35, 0.80);
+    border: 1px solid #D0D3D1;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(223, 229, 224, 0.10);
+    border-radius: 0;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    color: rgba(35, 35, 35, 0.80);
+    border: 1px solid #D0D3D1;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+    margin: 12px 0 0;
+    color: rgba(35, 35, 35, 0.80);
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.select2-container--default .select2-results__option--selected {
+    background-color: #ddf1e1;
+    color: rgba(35, 35, 35, 0.80);
+}
+
+.select2-results__option--selected:before {
+    background-color: #159C2A;
+    background-image: url("../img/checkbox-icon.svg");
+    background-position: center;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #ddf1e1;
+    color: rgba(35, 35, 35, 0.80);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #ddf1e1;
+    border: 1px solid #D0D3D1;
+    margin-left: 0;
+    margin-top: 11px;
+    margin-right: 10px;
+}
+
+.referral-form .custom-select {
+    position: relative;
+}
+
+.referral-form .custom-select svg {
+    position: absolute;
+    right: 12px;
+    top: 18px;
+    pointer-events: none;
+}
+
+.referral-form select {
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(35, 35, 35, 0.80);
+    border: 1px solid #D0D3D1;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(223, 229, 224, 0.10);
+    border-radius: 0;
+    height: 45px;
+    padding: 0 10px;
+    outline: none;
+    width: 100%;
+}
+
+.referral-form select:active,
+.referral-form select:focus,
+.referral-form select:hover {
+    border: 1px solid var(--Green, #159C2A);
+    outline: none;
+    box-shadow: none;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.datepicker table tr td.active.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active.disabled:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active:active, .datepicker table tr td.active:hover, .datepicker table tr td.active:hover.active, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active:hover:active, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active[disabled] {
+    background: #ddf1e1;
+    color: #232323;
+    text-shadow: none;
+}
+
+.datepicker.datepicker-dropdown.dropdown-menu {
+    border-radius: 0;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #D0D3D1;
+}
+
+.datepicker-dropdown::after,
+.datepicker-dropdown::before {
+    content: none;
+}
+
+.datepicker table tr td {
+    color: #232323;
+    font-family: "proxima_novasemibold";
+    font-family: "proxima_novaregular";
+    font-size: 16px;
+    padding: 6px 10px;
+}
+
+
+.datepicker table thead tr th {
+    color: #232323;
+    font-family: "proxima_novasemibold";
+}
+
+.btn-sign-up {
+    height: 55px;
+    text-align: center;
+    color: #FFF;
+    font-family: "FuturaDemiC Regular";
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 55px;
+    background: #159C2A;
+    border-radius: 0;
+    padding: 0 130px;
+    border: none;
+    outline: none;
+    margin-top: 37px;
+    margin-bottom: 53px;
+}
+
+.btn-sign-up:hover,
+.btn-sign-up:focus {
+    background-color: #41b753;
+    color: #FFF;
+    border: none;
+    outline: none;
+}
+
+.btn-sign-up:disabled {
+    background-color: #D0D3D1;
+    color: #000;
+}
+
+.submit-block .referral-sub-title {
+    color: #000;
+    max-width: 586px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.submit-block .referral-sub-title a {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    border-bottom: 1px solid #000;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    background-image: none;
+}
+
+.form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+    box-shadow: none;
+    border-color: rgb(185, 74, 72);
+}
+
+label.error,
+.invalid-feedback,
+.invalid-feedback label {
+    color: rgb(185, 74, 72);
+    font-size: 14px;
+}
+
+.invalid-feedback {
+    margin: 0;
+    height: 27px;
+    display: block;
+}
+
+select.is-invalid{
+    border-color: rgb(185, 74, 72);
+}
+
+.is-invalid + .select2-container--default > .selection > .select2-selection--multiple{
+    border-color: rgb(185, 74, 72);
+}
